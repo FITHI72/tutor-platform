@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Профиль репетитора — НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <script type="module" crossorigin src="/tutor-platform/assets/profile-KeYT_tWk.js"></script>
+  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/main-CoepWk80.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/profile-DVE1p534.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <nav class="nav__links">
+      <a href="/index.html" class="nav__link">Главная</a>
+      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="#" class="nav__link">О нас</a>
+      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
+      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+    </nav>
+  </header>
+
+  <div class="breadcrumb">
+    <a href="/index.html">Главная</a> →
+    <a href="/search.html">Репетиторы</a> →
+    <span>Анна Краснова</span>
+  </div>
+
+  <div class="profile-page">
+
+    <aside class="profile-aside">
+      <div class="profile-card">
+        <div class="profile-card__avatar av-blue" id="profileAvatar"></div>
+        <div class="profile-card__name" id="profileName"></div>
+        <div class="profile-card__subject" id="profileSubject"></div>
+        <div class="profile-card__meta">
+          <div class="profile-card__meta-item"><i class="ti ti-star"></i> <span id="profileRating"></span></div>
+          <div class="profile-card__meta-item"><i class="ti ti-clock"></i> <span id="profileExp"></span></div>
+          <div class="profile-card__meta-item"><i class="ti ti-map-pin"></i> <span id="profileCity"></span></div>
+          <div class="profile-card__meta-item"><i class="ti ti-video"></i> Онлайн и офлайн</div>
+        </div>
+        <div class="profile-card__divider"></div>
+        <div class="profile-card__price-row">
+          <div>
+            <div class="profile-card__price" id="profilePrice"></div>
+            <div class="profile-card__price-sub">за академический час</div>
+          </div>
+          <span class="profile-card__trial-badge">Пробное — бесплатно</span>
+        </div>
+        <button class="btn btn--primary profile-card__btn"
+          onclick="window.location.href='/application.html'">Записаться на занятие</button>
+        <button class="profile-card__btn profile-card__btn--msg">
+          <i class="ti ti-message"></i> Написать репетитору
+        </button>
+        <div class="profile-card__trial-note">✓ Первое пробное занятие бесплатно</div>
+      </div>
+
+      <div class="profile-stats">
+        <div class="profile-stats__card">
+          <div class="profile-stats__num" id="statReviews"></div>
+          <div class="profile-stats__label">Отзывов</div>
+        </div>
+        <div class="profile-stats__card">
+          <div class="profile-stats__num" id="statStudents"></div>
+          <div class="profile-stats__label">Учеников</div>
+        </div>
+        <div class="profile-stats__card">
+          <div class="profile-stats__num" id="statRating"></div>
+          <div class="profile-stats__label">Рейтинг</div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="profile-main">
+
+        <div class="profile-block">
+          <div class="profile-block__title">О себе</div>
+          <p class="profile-block__text" id="profileAbout"></p>
+        </div>
+
+      <div class="profile-block">
+        <div class="profile-block__title">Образование</div>
+        <div class="edu-item">
+          <div class="edu-item__icon"><i class="ti ti-school"></i></div>
+          <div>
+            <div class="edu-item__name">МГУ им. М.В. Ломоносова</div>
+            <div class="edu-item__sub">Механико-математический факультет · 2018 · С отличием</div>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-item__icon"><i class="ti ti-certificate"></i></div>
+          <div>
+            <div class="edu-item__name">Сертификат педагога дополнительного образования</div>
+            <div class="edu-item__sub">Министерство образования РФ · 2019</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="profile-block">
+        <div class="profile-block__title">Отзывы учеников</div>
+        <div class="reviews" id="reviews"></div>
+      </div>
+
+    </main>
+  </div>
+
+</body>
+</html>

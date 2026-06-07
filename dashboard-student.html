@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет — НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <script type="module" crossorigin src="/tutor-platform/assets/dashboardStudent-BLfED0VE.js"></script>
+  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/main-CoepWk80.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/dashboard-9ZZs0Hcv.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <div class="nav__right">
+      <div class="nav__avatar nav__avatar--blue">ИП</div>
+      <span class="nav__username">Иван Петров</span>
+      <i class="ti ti-chevron-down nav__chevron"></i>
+    </div>
+  </header>
+
+  <div class="dashboard">
+
+    <aside class="dashboard__sidebar">
+      <div class="dashboard__sidebar-section">
+        <div class="dashboard__sidebar-label">Главное</div>
+        <a href="#" class="dashboard__sidebar-item dashboard__sidebar-item--active">
+          <i class="ti ti-layout-dashboard"></i> Обзор
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-calendar"></i> Мои занятия
+          <span class="dashboard__badge">3</span>
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-heart"></i> Избранные
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-message"></i> Сообщения
+          <span class="dashboard__badge">1</span>
+        </a>
+      </div>
+      <div class="dashboard__sidebar-section">
+        <div class="dashboard__sidebar-label">Аккаунт</div>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-user"></i> Профиль
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-settings"></i> Настройки
+        </a>
+        <a href="/index.html" class="dashboard__sidebar-item">
+          <i class="ti ti-logout"></i> Выйти
+        </a>
+      </div>
+    </aside>
+
+    <main class="dashboard__main">
+      <div class="dashboard__page-title">Добро пожаловать, Иван!</div>
+      <div class="dashboard__page-sub">Вот что происходит с вашим обучением</div>
+
+      <div class="dashboard__stats" id="studentStats"></div>
+
+      <div class="dashboard__section-title">Ближайшие занятия</div>
+      <div class="dashboard__lessons" id="studentLessons"></div>
+
+      <div class="dashboard__section-title" style="margin-top:28px;">Избранные репетиторы</div>
+      <div class="dashboard__favs" id="studentFavs"></div>
+    </main>
+
+  </div>
+
+</body>
+</html>

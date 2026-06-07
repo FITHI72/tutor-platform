@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Поиск репетиторов — НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <script type="module" crossorigin src="/tutor-platform/assets/search-B-J68apZ.js"></script>
+  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/main-CoepWk80.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/search-C_Z7bfnt.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <nav class="nav__links">
+      <a href="/index.html" class="nav__link">Главная</a>
+      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="#" class="nav__link">О нас</a>
+      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
+      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+    </nav>
+  </header>
+
+  <div class="search-page">
+
+    <aside class="sidebar">
+      <div class="sidebar__title">Фильтры</div>
+
+      <div class="sidebar__group">
+        <div class="sidebar__label">Предмет</div>
+        <label class="sidebar__option"><input type="checkbox" checked> Математика</label>
+        <label class="sidebar__option"><input type="checkbox"> Английский язык</label>
+        <label class="sidebar__option"><input type="checkbox"> Физика</label>
+        <label class="sidebar__option"><input type="checkbox"> Химия</label>
+        <label class="sidebar__option"><input type="checkbox"> Программирование</label>
+        <label class="sidebar__option"><input type="checkbox"> Русский язык</label>
+      </div>
+
+      <div class="sidebar__group">
+        <div class="sidebar__label">Формат</div>
+        <label class="sidebar__option"><input type="radio" name="fmt" checked> Любой</label>
+        <label class="sidebar__option"><input type="radio" name="fmt"> Онлайн</label>
+        <label class="sidebar__option"><input type="radio" name="fmt"> Офлайн</label>
+      </div>
+
+      <div class="sidebar__group">
+        <div class="sidebar__label">Цена за урок (₽)</div>
+        <div class="sidebar__price-row">
+          <input class="sidebar__price-input" type="text" placeholder="от 500">
+          <span class="sidebar__price-sep">—</span>
+          <input class="sidebar__price-input" type="text" placeholder="до 3000">
+        </div>
+      </div>
+
+      <div class="sidebar__group">
+        <div class="sidebar__label">Рейтинг</div>
+        <label class="sidebar__option"><input type="radio" name="rat" checked> Любой</label>
+        <label class="sidebar__option"><input type="radio" name="rat"> От 4.5 ★</label>
+        <label class="sidebar__option"><input type="radio" name="rat"> От 4.8 ★</label>
+      </div>
+
+      <div class="sidebar__group">
+        <div class="sidebar__label">Опыт</div>
+        <label class="sidebar__option"><input type="radio" name="exp" checked> Любой</label>
+        <label class="sidebar__option"><input type="radio" name="exp"> От 1 года</label>
+        <label class="sidebar__option"><input type="radio" name="exp"> От 3 лет</label>
+        <label class="sidebar__option"><input type="radio" name="exp"> От 5 лет</label>
+      </div>
+
+      <button class="sidebar__reset">Сбросить фильтры</button>
+    </aside>
+
+    <main class="search-main">
+      <div class="search-main__top">
+        <div class="search-main__input-wrap">
+          <i class="ti ti-search"></i>
+          <input type="text" id="searchInput" placeholder="Поиск по имени или предмету..." />
+        </div>
+        <select class="search-main__sort" id="sortSelect">
+          <option value="rating">По рейтингу</option>
+          <option value="price_asc">По цене (возр.)</option>
+          <option value="price_desc">По цене (убыв.)</option>
+          <option value="exp">По опыту</option>
+        </select>
+      </div>
+
+      <div class="search-main__count" id="resultsCount">Найдено <strong>4 репетитора</strong></div>
+
+      <div id="loadingState" class="search-loading">
+        <div class="search-loading__spinner"></div>
+        <div class="search-loading__text">Загружаем репетиторов...</div>
+      </div>
+      <div class="tutors-list" id="tutorsList"></div>
+
+      <div class="pagination">
+        <button class="pagination__btn pagination__btn--active">1</button>
+        <button class="pagination__btn">2</button>
+        <button class="pagination__btn">3</button>
+        <span class="pagination__dots">...</span>
+        <button class="pagination__btn">12</button>
+      </div>
+    </main>
+
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Вход — НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <script type="module" crossorigin src="/tutor-platform/assets/auth-BWtsFjBx.js"></script>
+  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/main-CoepWk80.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/auth-Do6vUWYQ.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <nav class="nav__links">
+      <a href="/index.html" class="nav__link">Главная</a>
+      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="#" class="nav__link">О нас</a>
+    </nav>
+  </header>
+
+  <div class="auth-page">
+
+    <!-- ВХОД -->
+    <div class="auth-modal" id="loginModal">
+      <div class="auth-modal__tabs">
+        <button class="auth-modal__tab auth-modal__tab--active" id="tabLogin">Вход</button>
+        <button class="auth-modal__tab" id="tabRegister">Регистрация</button>
+      </div>
+      <div class="auth-modal__title">С возвращением!</div>
+      <div class="auth-modal__sub">Войдите в свой аккаунт</div>
+      <div class="auth-modal__group">
+        <label class="auth-modal__label">Email</label>
+        <input class="auth-modal__input" type="email" placeholder="example@mail.ru" />
+      </div>
+      <div class="auth-modal__group">
+        <label class="auth-modal__label">Пароль</label>
+        <input class="auth-modal__input" type="password" placeholder="••••••••" />
+        <span class="auth-modal__forgot">Забыли пароль?</span>
+      </div>
+      <button class="btn btn--primary auth-modal__submit" id="loginBtn">Войти</button>
+      <div class="auth-modal__divider"><span>или</span></div>
+      <button class="auth-modal__google">
+        <i class="ti ti-brand-google"></i> Войти через Google
+      </button>
+      <div class="auth-modal__switch">Нет аккаунта? <span id="toRegister">Зарегистрироваться</span></div>
+    </div>
+
+    <!-- РЕГИСТРАЦИЯ -->
+    <div class="auth-modal auth-modal--hidden" id="registerModal">
+      <div class="auth-modal__tabs">
+        <button class="auth-modal__tab" id="tabLogin2">Вход</button>
+        <button class="auth-modal__tab auth-modal__tab--active" id="tabRegister2">Регистрация</button>
+      </div>
+      <div class="auth-modal__title">Создать аккаунт</div>
+      <div class="auth-modal__sub">Кем вы хотите зарегистрироваться?</div>
+      <div class="auth-modal__roles" id="roleToggle">
+        <div class="auth-modal__role auth-modal__role--active" data-role="student">
+          <i class="ti ti-user"></i>
+          <span>Ученик</span>
+        </div>
+        <div class="auth-modal__role" data-role="tutor">
+          <i class="ti ti-chalkboard"></i>
+          <span>Репетитор</span>
+        </div>
+      </div>
+      <div class="auth-modal__group">
+        <label class="auth-modal__label">Имя и фамилия</label>
+        <input class="auth-modal__input" type="text" placeholder="Иван Иванов" />
+      </div>
+      <div class="auth-modal__group">
+        <label class="auth-modal__label">Email</label>
+        <input class="auth-modal__input" type="email" placeholder="example@mail.ru" />
+      </div>
+      <div class="auth-modal__group">
+        <label class="auth-modal__label">Пароль</label>
+        <input class="auth-modal__input" type="password" placeholder="Минимум 8 символов" />
+      </div>
+      <button class="btn btn--primary auth-modal__submit" id="registerBtn">Создать аккаунт</button>
+      <div class="auth-modal__switch">Уже есть аккаунт? <span id="toLogin">Войти</span></div>
+    </div>
+
+  </div>
+
+</body>
+</html>

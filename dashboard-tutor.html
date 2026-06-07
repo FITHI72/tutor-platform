@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Кабинет репетитора — НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <script type="module" crossorigin src="/tutor-platform/assets/dashboardTutor-DC59WH40.js"></script>
+  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/main-CoepWk80.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/dashboard-9ZZs0Hcv.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <div class="nav__right">
+      <span class="nav__role-badge">Репетитор</span>
+      <div class="nav__avatar nav__avatar--green">АК</div>
+      <span class="nav__username">Анна Краснова</span>
+      <i class="ti ti-chevron-down nav__chevron"></i>
+    </div>
+  </header>
+
+  <div class="dashboard">
+
+    <aside class="dashboard__sidebar">
+      <div class="dashboard__sidebar-section">
+        <div class="dashboard__sidebar-label">Главное</div>
+        <a href="#" class="dashboard__sidebar-item dashboard__sidebar-item--active">
+          <i class="ti ti-layout-dashboard"></i> Обзор
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-inbox"></i> Заявки
+          <span class="dashboard__badge">4</span>
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-calendar"></i> Расписание
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-message"></i> Сообщения
+          <span class="dashboard__badge">2</span>
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-chart-bar"></i> Статистика
+        </a>
+      </div>
+      <div class="dashboard__sidebar-section">
+        <div class="dashboard__sidebar-label">Профиль</div>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-user"></i> Моя анкета
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-cash"></i> Выплаты
+        </a>
+        <a href="#" class="dashboard__sidebar-item">
+          <i class="ti ti-settings"></i> Настройки
+        </a>
+        <a href="/index.html" class="dashboard__sidebar-item">
+          <i class="ti ti-logout"></i> Выйти
+        </a>
+      </div>
+    </aside>
+
+    <main class="dashboard__main">
+      <div class="dashboard__top-row">
+        <div>
+          <div class="dashboard__page-title">Панель репетитора</div>
+          <div class="dashboard__page-sub">Анна Краснова · Математика</div>
+        </div>
+        <button class="btn btn--primary" onclick="window.location.href='/profile.html'">
+          <i class="ti ti-edit"></i> Редактировать анкету
+        </button>
+      </div>
+
+      <div class="dashboard__status">
+        <div class="dashboard__status-dot"></div>
+        <div>
+          <div class="dashboard__status-text">Профиль активен и виден ученикам</div>
+          <div class="dashboard__status-sub">Последнее обновление: 3 мая 2026</div>
+        </div>
+      </div>
+
+      <div class="dashboard__stats" id="tutorStats"></div>
+
+      <div class="dashboard__two-col">
+        <div>
+          <div class="dashboard__section-title">Новые заявки</div>
+          <div class="dashboard__requests" id="tutorRequests"></div>
+        </div>
+        <div>
+          <div class="dashboard__section-title">Расписание на сегодня</div>
+          <div class="dashboard__schedule" id="tutorSchedule"></div>
+        </div>
+      </div>
+
+      <div class="dashboard__section-title" style="margin-top:28px;">Заработок</div>
+      <div class="dashboard__earnings" id="tutorEarnings"></div>
+    </main>
+
+  </div>
+
+</body>
+</html>
