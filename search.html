@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <base href="/tutor-platform/"> <!-- Добавлен тег base -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Поиск репетиторов — НайдиРепетитора</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <script type="module" crossorigin src="/tutor-platform/assets/search-BYeZMJsX.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> <!-- Убран "/" перед "src/" --> <!-- Убран "/" перед "src/" -->
+  <script type="module" crossorigin src="/tutor-platform/assets/search-BlBvqJLt.js"></script>
   <link rel="modulepreload" crossorigin href="/tutor-platform/assets/modulepreload-polyfill-DfS4ul37.js">
   <link rel="stylesheet" crossorigin href="/tutor-platform/assets/search-C_Z7bfnt.css">
   <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
@@ -15,11 +16,11 @@
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <nav class="nav__links">
-      <a href="/index.html" class="nav__link">Главная</a>
-      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="index.html" class="nav__link">Главная</a> <!-- Убран "/" перед "index.html" -->
+      <a href="search.html" class="nav__link">Репетиторы</a> <!-- Убран "/" перед "search.html" -->
       <a href="#" class="nav__link">О нас</a>
-      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
-      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+      <button class="btn btn--outline" onclick="window.location.href='auth.html'">Войти</button> <!-- Убран "/" перед "auth.html" -->
+      <button class="btn btn--primary" onclick="window.location.href='auth.html'">Регистрация</button> <!-- Убран "/" перед "auth.html" -->
     </nav>
   </header>
 
@@ -95,6 +96,6 @@
     </main>
 
   </div>
-
+ <!-- Убран "/" перед "src/" -->
 </body>
 </html>

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <base href="/tutor-platform/"> <!-- Добавлен тег base -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Кабинет репетитора — НайдиРепетитора</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href='/tutor-platform/src/styles/main.css" />
-  <link rel="stylesheet" href='/tutor-platform/src/styles/dashboard.css" />
-  <script type="module" crossorigin src="/tutor-platform/assets/dashboardTutor-B1cEvcJe.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" /> <!-- Убран "/" перед "src/" --> <!-- Убран "/" перед "src/" -->
+  <script type="module" crossorigin src="/tutor-platform/assets/dashboardTutor-CoeNNohf.js"></script>
   <link rel="modulepreload" crossorigin href="/tutor-platform/assets/modulepreload-polyfill-DfS4ul37.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/dashboard-9ZZs0Hcv.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
 </head>
 <body>
-
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <div class="nav__right">
@@ -23,7 +23,6 @@
   </header>
 
   <div class="dashboard">
-
     <aside class="dashboard__sidebar">
       <div class="dashboard__sidebar-section">
         <div class="dashboard__sidebar-label">Главное</div>
@@ -56,7 +55,7 @@
         <a href="#" class="dashboard__sidebar-item">
           <i class="ti ti-settings"></i> Настройки
         </a>
-        <a href='/tutor-platform/index.html" class="dashboard__sidebar-item">
+        <a href="index.html" class="dashboard__sidebar-item"> <!-- Убран "/" перед "index.html" -->
           <i class="ti ti-logout"></i> Выйти
         </a>
       </div>
@@ -68,7 +67,7 @@
           <div class="dashboard__page-title">Панель репетитора</div>
           <div class="dashboard__page-sub">Анна Краснова · Математика</div>
         </div>
-        <button class="btn btn--primary" onclick="window.location.href='/tutor-platform/profile.html'">
+        <button class="btn btn--primary" onclick="window.location.href='profile.html'"> <!-- Убран "/" перед "profile.html" -->
           <i class="ti ti-edit"></i> Редактировать анкету
         </button>
       </div>
@@ -97,8 +96,7 @@
       <div class="dashboard__section-title" style="margin-top:28px;">Заработок</div>
       <div class="dashboard__earnings" id="tutorEarnings"></div>
     </main>
-
   </div>
-
+ <!-- Убран "/" перед "src/" -->
 </body>
 </html>
