@@ -4,29 +4,29 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Профиль репетитора — НайдиРепетитора</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href='/tutor-platform/src/styles/main.css" />
-  <link rel="stylesheet" href='/tutor-platform/src/styles/profile.css" />
-  <script type="module" crossorigin src="/tutor-platform/assets/profile-DjF3iF1l.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <script type="module" crossorigin src="/tutor-platform/assets/profile-B5aQ77XS.js"></script>
   <link rel="modulepreload" crossorigin href="/tutor-platform/assets/modulepreload-polyfill-DfS4ul37.js">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/profile-DVE1p534.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
 </head>
 <body>
 
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <nav class="nav__links">
-      <a href='/tutor-platform/index.html" class="nav__link">Главная</a>
-      <a href='/tutor-platform/search.html" class="nav__link">Репетиторы</a>
+      <a href="/index.html" class="nav__link">Главная</a>
+      <a href="/search.html" class="nav__link">Репетиторы</a>
       <a href="#" class="nav__link">О нас</a>
-      <button class="btn btn--outline" onclick="window.location.href='/tutor-platform/auth.html'">Войти</button>
-      <button class="btn btn--primary" onclick="window.location.href='/tutor-platform/auth.html'">Регистрация</button>
+      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
+      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
     </nav>
   </header>
 
   <div class="breadcrumb">
-    <a href='/tutor-platform/index.html">Главная</a> →
-    <a href='/tutor-platform/search.html">Репетиторы</a> →
-    <span>Анна Краснова</span>
+    <a href="/index.html">Главная</a> →
+    <a href="/search.html">Репетиторы</a> →
+    <span id="breadcrumbName">Репетитор</span>
   </div>
 
   <div class="profile-page">
@@ -51,7 +51,7 @@
           <span class="profile-card__trial-badge">Пробное — бесплатно</span>
         </div>
         <button class="btn btn--primary profile-card__btn"
-          onclick="window.location.href='/tutor-platform/application.html'">Записаться на занятие</button>
+          onclick="window.location.href='/application.html'">Записаться на занятие</button>
         <button class="profile-card__btn profile-card__btn--msg">
           <i class="ti ti-message"></i> Написать репетитору
         </button>
@@ -75,12 +75,10 @@
     </aside>
 
     <main class="profile-main">
-
-        <div class="profile-block">
-          <div class="profile-block__title">О себе</div>
-          <p class="profile-block__text" id="profileAbout"></p>
-        </div>
-
+      <div class="profile-block">
+        <div class="profile-block__title">О себе</div>
+        <p class="profile-block__text" id="profileAbout"></p>
+      </div>
       <div class="profile-block">
         <div class="profile-block__title">Образование</div>
         <div class="edu-item">
@@ -98,12 +96,10 @@
           </div>
         </div>
       </div>
-
       <div class="profile-block">
         <div class="profile-block__title">Отзывы учеников</div>
         <div class="reviews" id="reviews"></div>
       </div>
-
     </main>
   </div>
 

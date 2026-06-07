@@ -4,30 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Вход — НайдиРепетитора</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href='/tutor-platform/src/styles/main.css" />
-  <link rel="stylesheet" href='/tutor-platform/src/styles/auth.css" />
-  <script type="module" crossorigin src="/tutor-platform/assets/auth-DDYbk9Fd.js"></script>
-  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/modulepreload-polyfill-DfS4ul37.js">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/auth-Do6vUWYQ.css">
+  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
 </head>
 <body>
 
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <nav class="nav__links">
-      <a href='/tutor-platform/index.html" class="nav__link">Главная</a>
-      <a href='/tutor-platform/search.html" class="nav__link">Репетиторы</a>
+      <a href="/index.html" class="nav__link">Главная</a>
+      <a href="/search.html" class="nav__link">Репетиторы</a>
       <a href="#" class="nav__link">О нас</a>
     </nav>
   </header>
 
   <div class="auth-page">
 
-    <!-- ВХОД -->
     <div class="auth-modal" id="loginModal">
       <div class="auth-modal__tabs">
-        <button class="auth-modal__tab auth-modal__tab--active" id="tabLogin">Вход</button>
-        <button class="auth-modal__tab" id="tabRegister">Регистрация</button>
+        <button class="auth-modal__tab auth-modal__tab--active" onclick="showLogin()">Вход</button>
+        <button class="auth-modal__tab" onclick="showRegister()">Регистрация</button>
       </div>
       <div class="auth-modal__title">С возвращением!</div>
       <div class="auth-modal__sub">Войдите в свой аккаунт</div>
@@ -38,30 +35,29 @@
       <div class="auth-modal__group">
         <label class="auth-modal__label">Пароль</label>
         <input class="auth-modal__input" type="password" placeholder="••••••••" />
-        <span class="auth-modal__forgot">Забыли пароль?</span>
+        <span class="auth-modal__forgot" onclick="alert('Функция восстановления пароля в разработке')">Забыли пароль?</span>
       </div>
-      <button class="btn btn--primary auth-modal__submit" id="loginBtn">Войти</button>
+      <button class="btn btn--primary auth-modal__submit" onclick="doLogin()">Войти</button>
       <div class="auth-modal__divider"><span>или</span></div>
       <button class="auth-modal__google">
         <i class="ti ti-brand-google"></i> Войти через Google
       </button>
-      <div class="auth-modal__switch">Нет аккаунта? <span id="toRegister">Зарегистрироваться</span></div>
+      <div class="auth-modal__switch">Нет аккаунта? <span onclick="showRegister()">Зарегистрироваться</span></div>
     </div>
 
-    <!-- РЕГИСТРАЦИЯ -->
     <div class="auth-modal auth-modal--hidden" id="registerModal">
       <div class="auth-modal__tabs">
-        <button class="auth-modal__tab" id="tabLogin2">Вход</button>
-        <button class="auth-modal__tab auth-modal__tab--active" id="tabRegister2">Регистрация</button>
+        <button class="auth-modal__tab" onclick="showLogin()">Вход</button>
+        <button class="auth-modal__tab auth-modal__tab--active" onclick="showRegister()">Регистрация</button>
       </div>
       <div class="auth-modal__title">Создать аккаунт</div>
       <div class="auth-modal__sub">Кем вы хотите зарегистрироваться?</div>
-      <div class="auth-modal__roles" id="roleToggle">
-        <div class="auth-modal__role auth-modal__role--active" data-role="student">
+      <div class="auth-modal__roles">
+        <div class="auth-modal__role auth-modal__role--active" id="roleStudent" onclick="selectRole('student')">
           <i class="ti ti-user"></i>
           <span>Ученик</span>
         </div>
-        <div class="auth-modal__role" data-role="tutor">
+        <div class="auth-modal__role" id="roleTutor" onclick="selectRole('tutor')">
           <i class="ti ti-chalkboard"></i>
           <span>Репетитор</span>
         </div>
@@ -78,11 +74,41 @@
         <label class="auth-modal__label">Пароль</label>
         <input class="auth-modal__input" type="password" placeholder="Минимум 8 символов" />
       </div>
-      <button class="btn btn--primary auth-modal__submit" id="registerBtn">Создать аккаунт</button>
-      <div class="auth-modal__switch">Уже есть аккаунт? <span id="toLogin">Войти</span></div>
+      <button class="btn btn--primary auth-modal__submit" onclick="doRegister()">Создать аккаунт</button>
+      <div class="auth-modal__switch">Уже есть аккаунт? <span onclick="showLogin()">Войти</span></div>
     </div>
 
   </div>
-
+
+  <script>
+    let currentRole = 'student';
+
+    function showLogin() {
+      document.getElementById('loginModal').classList.remove('auth-modal--hidden');
+      document.getElementById('registerModal').classList.add('auth-modal--hidden');
+    }
+
+    function showRegister() {
+      document.getElementById('loginModal').classList.add('auth-modal--hidden');
+      document.getElementById('registerModal').classList.remove('auth-modal--hidden');
+    }
+
+    function selectRole(role) {
+      currentRole = role;
+      document.getElementById('roleStudent').classList.toggle('auth-modal__role--active', role === 'student');
+      document.getElementById('roleTutor').classList.toggle('auth-modal__role--active', role === 'tutor');
+    }
+
+    function doLogin() {
+      const role = localStorage.getItem('role') || 'student';
+      window.location.href = role === 'tutor' ? '/dashboard-tutor.html' : '/dashboard-student.html';
+    }
+
+    function doRegister() {
+      localStorage.setItem('role', currentRole);
+      window.location.href = currentRole === 'tutor' ? '/dashboard-tutor.html' : '/dashboard-student.html';
+    }
+  </script>
+
 </body>
 </html>
