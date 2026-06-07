@@ -1,0 +1,470 @@
+/* ===== НАВБАР ===== */
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav__avatar--blue {
+  background: #E6F1FB;
+  color: #0C447C;
+}
+
+.nav__username {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.nav__chevron {
+  font-size: 14px;
+  color: #888;
+}
+
+.nav__role-badge {
+  font-size: 11px;
+  background: #EAF3DE;
+  color: #27500A;
+  padding: 3px 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+/* ===== LAYOUT ===== */
+.dashboard {
+  display: grid;
+  grid-template-columns: 210px 1fr;
+  min-height: calc(100vh - 57px);
+}
+
+/* ===== САЙДБАР ===== */
+.dashboard__sidebar {
+  background: #f9f9f9;
+  border-right: 1px solid #eee;
+  padding: 20px 0;
+}
+
+.dashboard__sidebar-section {
+  margin-bottom: 8px;
+}
+
+.dashboard__sidebar-label {
+  font-size: 11px;
+  color: #aaa;
+  padding: 0 16px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+
+.dashboard__sidebar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 9px 16px;
+  font-size: 13px;
+  color: #666;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.15s;
+}
+
+.dashboard__sidebar-item:hover {
+  color: #111;
+  background: #f0f0f0;
+}
+
+.dashboard__sidebar-item--active {
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  border-right: 2px solid #111;
+}
+
+.dashboard__sidebar-item i {
+  font-size: 16px;
+}
+
+.dashboard__badge {
+  margin-left: auto;
+  background: #185FA5;
+  color: #fff;
+  font-size: 10px;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+/* ===== ОСНОВНАЯ ЧАСТЬ ===== */
+.dashboard__main {
+  padding: 28px 32px;
+  background: #fff;
+}
+
+.dashboard__top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.dashboard__page-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.dashboard__page-sub {
+  font-size: 13px;
+  color: #888;
+}
+
+.dashboard__section-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 14px;
+}
+
+/* ===== СТАТУС (репетитор) ===== */
+.dashboard__status {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 18px;
+  background: #EAF3DE;
+  border-radius: 10px;
+  margin-bottom: 22px;
+}
+
+.dashboard__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #3B6D11;
+  flex-shrink: 0;
+}
+
+.dashboard__status-text {
+  font-size: 13px;
+  color: #27500A;
+  font-weight: 500;
+}
+
+.dashboard__status-sub {
+  font-size: 12px;
+  color: #3B6D11;
+  margin-top: 2px;
+}
+
+/* ===== СТАТИСТИКА ===== */
+.dashboard__stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 28px;
+}
+
+.dashboard__stat {
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.dashboard__stat-num {
+  font-size: 22px;
+  font-weight: 600;
+  color: #185FA5;
+}
+
+.dashboard__stat-num--green {
+  color: #3B6D11;
+}
+
+.dashboard__stat-label {
+  font-size: 12px;
+  color: #888;
+  margin-top: 3px;
+}
+
+/* ===== ЗАНЯТИЯ ===== */
+.dashboard__lessons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard__lesson {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.dashboard__lesson-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.dashboard__lesson-name {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111;
+}
+
+.dashboard__lesson-sub {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.dashboard__lesson-time {
+  font-size: 12px;
+  color: #185FA5;
+  margin-left: auto;
+  text-align: right;
+}
+
+.dashboard__lesson-status {
+  font-size: 11px;
+  color: #BA7517;
+  margin-top: 2px;
+}
+
+/* ===== ИЗБРАННЫЕ ===== */
+.dashboard__favs {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.dashboard__fav {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 14px;
+}
+
+.dashboard__fav-top {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.dashboard__fav-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.dashboard__fav-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.dashboard__fav-subj {
+  font-size: 12px;
+  color: #888;
+  margin-top: 1px;
+}
+
+.dashboard__fav-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.dashboard__fav-rating {
+  color: #185FA5;
+}
+
+.dashboard__fav-price {
+  font-weight: 500;
+  color: #111;
+}
+
+/* ===== ДВЕ КОЛОНКИ (репетитор) ===== */
+.dashboard__two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 8px;
+}
+
+/* ===== ЗАЯВКИ ===== */
+.dashboard__requests {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dashboard__request {
+  padding: 14px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.dashboard__request-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+}
+
+.dashboard__request-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.dashboard__request-time {
+  font-size: 11px;
+  color: #aaa;
+}
+
+.dashboard__request-sub {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+}
+
+.dashboard__request-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn--accept {
+  background: #111;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn--decline {
+  background: transparent;
+  color: #A32D2D;
+  border: 1px solid #F7C1C1;
+  border-radius: 6px;
+  padding: 6px 14px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ===== РАСПИСАНИЕ ===== */
+.dashboard__schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.dashboard__sched-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 14px;
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.dashboard__sched-time {
+  font-size: 12px;
+  font-weight: 500;
+  color: #185FA5;
+  min-width: 80px;
+}
+
+.dashboard__sched-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: #E6F1FB;
+  color: #0C447C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+.dashboard__sched-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.dashboard__sched-subj {
+  font-size: 11px;
+  color: #888;
+}
+
+.dashboard__sched-btn {
+  margin-left: auto;
+  padding: 6px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+/* ===== ЗАРАБОТОК ===== */
+.dashboard__earnings {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+}
+
+.dashboard__earn {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+.dashboard__earn-num {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.dashboard__earn-label {
+  font-size: 12px;
+  color: #888;
+  margin-top: 3px;
+}
+
+.dashboard__earn-diff {
+  font-size: 12px;
+  color: #3B6D11;
+  margin-top: 6px;
+}

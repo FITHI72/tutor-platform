@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <nav class="nav__links">
+      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="#" class="nav__link">Предметы</a>
+      <a href="#" class="nav__link">О нас</a>
+      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
+      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+    </nav>
+  </header>
+
+ <section class="hero">
+    <div class="hero__badge">🎓 Более 2 000 репетиторов</div>
+    <h1 class="hero__title">Найди своего<br><span class="hero__title-accent">идеального репетитора</span></h1>
+    <p class="hero__subtitle">Подбери специалиста по любому предмету — онлайн или рядом с домом</p>
+     <div class="hero__actions">
+       <button class="btn btn--primary hero__btn" onclick="window.location.href='/search.html'">
+         <i class="ti ti-search"></i> Найти репетитора
+       </button>
+       <button class="btn btn--outline hero__btn" onclick="window.location.href='/application.html'">
+          <i class="ti ti-file-description"></i> Оставить заявку
+       </button>
+     </div>
+    <div class="hero__stats">
+      <div class="hero__stat">
+        <div class="hero__stat-num">2 400+</div>
+        <div class="hero__stat-label">Репетиторов</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">18 000+</div>
+        <div class="hero__stat-label">Занятий проведено</div>
+      </div>
+      <div class="hero__stat">
+        <div class="hero__stat-num">4.9 ★</div>
+        <div class="hero__stat-label">Средний рейтинг</div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="tutors">
+    <div class="tutors__header">
+      <div class="tutors__title">Популярные репетиторы</div>
+      <div class="tutors__sub">Выбери специалиста по предмету</div>
+    </div>
+    <div class="tutors__filters" id="filters"></div>
+    <div class="tutors__grid" id="tutorsGrid"></div>
+  </section>
+
+  <section class="how">
+    <div class="how__title">Как это работает</div>
+    <div class="how__sub">Три простых шага до первого занятия</div>
+    <div class="how__grid">
+      <div class="how__card">
+        <div class="how__icon how__icon--blue"><i class="ti ti-search"></i></div>
+        <h3 class="how__name">Найди репетитора</h3>
+        <p class="how__desc">Используй фильтры по предмету, цене и рейтингу</p>
+      </div>
+      <div class="how__card">
+        <div class="how__icon how__icon--gray"><i class="ti ti-calendar"></i></div>
+        <h3 class="how__name">Запишись на занятие</h3>
+        <p class="how__desc">Выбери удобное время и оставь заявку</p>
+      </div>
+      <div class="how__card">
+        <div class="how__icon how__icon--blue"><i class="ti ti-star"></i></div>
+        <h3 class="how__name">Учись и оставляй отзыв</h3>
+        <p class="how__desc">Помогай другим найти лучшего специалиста</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="cta">
+    <h2 class="cta__title">Ты репетитор?</h2>
+    <p class="cta__sub">Создай профиль и начни получать учеников уже сегодня</p>
+    <button class="btn btn--white" onclick="window.location.href='/auth.html'">Стать репетитором</button>
+  </div>
+
+  <footer class="footer">
+    <div class="footer__logo">Найди<span class="footer__logo-accent">Репетитора</span></div>
+    <div class="footer__links">
+      <a href="#" class="footer__link">О проекте</a>
+      <a href="#" class="footer__link">Контакты</a>
+      <a href="#" class="footer__link">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

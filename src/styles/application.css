@@ -1,0 +1,371 @@
+/* ===== LAYOUT ===== */
+.app-page {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 24px;
+  padding: 24px 40px;
+  background: #f9f9f9;
+  min-height: calc(100vh - 57px);
+}
+
+.app-page--centered {
+  display: flex;
+  justify-content: center;
+  padding: 40px 24px;
+  background: #f9f9f9;
+  min-height: calc(100vh - 57px);
+}
+
+.app-page--centered .app-form {
+  width: 100%;
+  max-width: 720px;
+}
+
+/* ===== ФОРМА ===== */
+.app-form {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 32px;
+}
+
+.app-form__title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.app-form__sub {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 28px;
+}
+
+.app-form__section {
+  margin-bottom: 28px;
+}
+
+.app-form__section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+/* ===== ОПЦИИ ===== */
+.app-form__options {
+  display: grid;
+  gap: 8px;
+}
+
+.app-form__options--3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.app-form__option {
+  padding: 11px 14px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  cursor: pointer;
+  background: #fff;
+  color: #666;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.app-form__option:hover {
+  border-color: #111;
+  color: #111;
+}
+
+.app-form__option--active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  font-weight: 500;
+}
+
+.app-form__option--active .app-form__option-sub {
+  color: #aaa;
+}
+
+.app-form__option-label {
+  display: block;
+  font-size: 13px;
+}
+
+.app-form__option-sub {
+  display: block;
+  font-size: 11px;
+  color: #888;
+  margin-top: 2px;
+}
+
+/* ===== ФОРМАТ ===== */
+.app-form__formats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.app-form__format {
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  background: #fff;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.app-form__format i {
+  font-size: 24px;
+  color: #888;
+  display: block;
+  margin-bottom: 6px;
+}
+
+.app-form__format:hover {
+  border-color: #111;
+}
+
+.app-form__format--active {
+  background: #111;
+  border-color: #111;
+}
+
+.app-form__format--active i {
+  color: #fff;
+}
+
+.app-form__format-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+}
+
+.app-form__format--active .app-form__format-label {
+  color: #fff;
+}
+
+.app-form__format-sub {
+  font-size: 12px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.app-form__format--active .app-form__format-sub {
+  color: #aaa;
+}
+
+/* ===== РАСПИСАНИЕ ===== */
+.app-form__timetable-wrap {
+  overflow-x: auto;
+}
+
+.app-form__timetable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.app-form__timetable th {
+  font-size: 12px;
+  color: #888;
+  font-weight: 500;
+  padding: 6px 4px;
+  text-align: center;
+}
+
+.app-form__timetable td {
+  padding: 3px;
+}
+
+.time-slot {
+  width: 100%;
+  padding: 8px 4px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  cursor: pointer;
+  color: #888;
+  background: #fff;
+  transition: all 0.15s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.time-slot:hover {
+  border-color: #111;
+}
+
+.time-slot--selected {
+  background: #111;
+  border-color: #111;
+}
+
+.time-slot__check {
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid #ccc;
+  border-radius: 3px;
+  display: inline-block;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.time-slot--selected .time-slot__check {
+  background: #fff;
+  border-color: #fff;
+}
+
+.time-slot--selected .time-slot__check::after {
+  content: '✓';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 12px;
+  color: #111;
+  font-weight: 700;
+}
+
+.time-label {
+  font-size: 11px;
+  color: #888;
+  padding: 3px 10px 3px 0;
+  white-space: nowrap;
+  text-align: right;
+}
+
+/* ===== TEXTAREA ===== */
+.app-form__textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 13px;
+  color: #111;
+  background: #fff;
+  resize: vertical;
+  min-height: 100px;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.app-form__textarea:focus {
+  border-color: #185FA5;
+}
+
+.app-form__submit {
+  width: 100%;
+  padding: 13px;
+  font-size: 15px;
+  margin-top: 4px;
+}
+
+/* ===== SUMMARY (старый, на случай если используется) ===== */
+.app-summary__card {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 22px;
+  position: sticky;
+  top: 16px;
+}
+
+.app-summary__title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 16px;
+}
+
+.app-summary__tutor {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #f9f9f9;
+  border-radius: 10px;
+  padding: 12px;
+  margin-bottom: 16px;
+}
+
+.app-summary__avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #E6F1FB;
+  color: #0C447C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.app-summary__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+}
+
+.app-summary__subject {
+  font-size: 12px;
+  color: #185FA5;
+  margin-top: 2px;
+}
+
+.app-summary__rows {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.app-summary__row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.app-summary__key {
+  color: #888;
+}
+
+.app-summary__val {
+  color: #111;
+  font-weight: 500;
+}
+
+.app-summary__price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 14px;
+  border-top: 1px solid #eee;
+}
+
+.app-summary__price-label {
+  font-size: 13px;
+  color: #888;
+}
+
+.app-summary__price-val {
+  font-size: 18px;
+  font-weight: 600;
+  color: #111;
+}
+
+.app-summary__note {
+  font-size: 12px;
+  color: #3B6D11;
+  text-align: center;
+  margin-top: 12px;
+}

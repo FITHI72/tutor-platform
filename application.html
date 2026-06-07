@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Заявка — НайдиРепетитора</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href="/src/styles/main.css" />
+  <link rel="stylesheet" href="/src/styles/application.css" />
+</head>
+<body>
+
+  <header class="nav">
+    <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
+    <nav class="nav__links">
+      <a href="/index.html" class="nav__link">Главная</a>
+      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="#" class="nav__link">О нас</a>
+      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
+      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+    </nav>
+  </header>
+
+  <div class="app-page app-page--centered">
+    <div class="app-form">
+      <div class="app-form__title">Оставить заявку</div>
+      <div class="app-form__sub">Расскажите о себе — подходящие репетиторы откликнутся сами</div>
+
+      <div class="app-form__section">
+        <div class="app-form__section-title">Предмет</div>
+        <div class="app-form__options app-form__options--3" id="subjectOptions">
+          <div class="app-form__option" data-value="math">Математика</div>
+          <div class="app-form__option app-form__option--active" data-value="english">Английский язык</div>
+          <div class="app-form__option" data-value="physics">Физика</div>
+          <div class="app-form__option" data-value="chemistry">Химия</div>
+          <div class="app-form__option" data-value="programming">Программирование</div>
+          <div class="app-form__option" data-value="russian">Русский язык</div>
+        </div>
+      </div>
+
+      <div class="app-form__section">
+        <div class="app-form__section-title">Ваш уровень по предмету</div>
+        <div class="app-form__options app-form__options--3" id="levelOptions">
+          <div class="app-form__option app-form__option--active" data-value="beginner">
+            <span class="app-form__option-label">Начинающий</span>
+            <span class="app-form__option-sub">С нуля</span>
+          </div>
+          <div class="app-form__option" data-value="middle">
+            <span class="app-form__option-label">Средний</span>
+            <span class="app-form__option-sub">Базовые знания</span>
+          </div>
+          <div class="app-form__option" data-value="advanced">
+            <span class="app-form__option-label">Продвинутый</span>
+            <span class="app-form__option-sub">Углублённый курс</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-form__section">
+        <div class="app-form__section-title">Возраст</div>
+        <div class="app-form__options app-form__options--3" id="ageOptions">
+          <div class="app-form__option" data-value="under12">До 12 лет</div>
+          <div class="app-form__option app-form__option--active" data-value="13-17">13 – 17 лет</div>
+          <div class="app-form__option" data-value="18-25">18 – 25 лет</div>
+          <div class="app-form__option" data-value="26-35">26 – 35 лет</div>
+          <div class="app-form__option" data-value="36-45">36 – 45 лет</div>
+          <div class="app-form__option" data-value="46+">46+ лет</div>
+        </div>
+      </div>
+
+      <div class="app-form__section">
+        <div class="app-form__section-title">Формат занятий</div>
+        <div class="app-form__formats" id="formatOptions">
+          <div class="app-form__format app-form__format--active" data-value="online">
+            <i class="ti ti-video"></i>
+            <div class="app-form__format-label">Онлайн</div>
+            <div class="app-form__format-sub">Zoom, Google Meet</div>
+          </div>
+          <div class="app-form__format" data-value="offline">
+            <i class="ti ti-map-pin"></i>
+            <div class="app-form__format-label">Офлайн</div>
+            <div class="app-form__format-sub">У репетитора или у вас</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="app-form__section">
+        <div class="app-form__section-title">Удобное время для занятий</div>
+        <div class="app-form__timetable-wrap">
+          <table class="app-form__timetable">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Пн</th><th>Вт</th><th>Ср</th><th>Чт</th><th>Пт</th><th>Сб</th><th>Вс</th>
+              </tr>
+            </thead>
+            <tbody id="timetableBody"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="app-form__section">
+        <div class="app-form__section-title">Дополнительная информация</div>
+        <textarea class="app-form__textarea" placeholder="Расскажите о своих целях, пожеланиях к занятиям, или задайте вопрос..."></textarea>
+      </div>
+
+      <button class="btn btn--primary app-form__submit" id="submitBtn">Отправить заявку</button>
+    </div>
+  </div>
+
+  <script type="module" src="/src/scripts/application.js"></script>
+</body>
+</html>

@@ -1,0 +1,207 @@
+/* ===== СТРАНИЦА AUTH ===== */
+.auth-page {
+  min-height: calc(100vh - 57px);
+  background: #f9f9f9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  padding: 40px 24px;
+  flex-wrap: wrap;
+}
+
+/* ===== МОДАЛКА ===== */
+.auth-modal {
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  padding: 32px;
+  width: 340px;
+}
+
+.auth-modal--hidden {
+  display: none;
+}
+
+/* ===== ТАБЫ ===== */
+.auth-modal__tabs {
+  display: flex;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 24px;
+}
+
+.auth-modal__tab {
+  flex: 1;
+  text-align: center;
+  padding-bottom: 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #888;
+  border: none;
+  background: transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  font-weight: 400;
+  transition: all 0.15s;
+}
+
+.auth-modal__tab--active {
+  color: #111;
+  font-weight: 600;
+  border-bottom: 2px solid #111;
+}
+
+/* ===== ЗАГОЛОВОК ===== */
+.auth-modal__title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111;
+  margin-bottom: 4px;
+}
+
+.auth-modal__sub {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 22px;
+}
+
+/* ===== ФОРМА ===== */
+.auth-modal__group {
+  margin-bottom: 14px;
+}
+
+.auth-modal__label {
+  display: block;
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.auth-modal__input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #111;
+  background: #fff;
+  outline: none;
+  transition: border-color 0.15s;
+}
+
+.auth-modal__input:focus {
+  border-color: #185FA5;
+}
+
+.auth-modal__forgot {
+  display: block;
+  font-size: 12px;
+  color: #185FA5;
+  text-align: right;
+  margin-top: 6px;
+  cursor: pointer;
+}
+
+.auth-modal__submit {
+  width: 100%;
+  padding: 12px;
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+/* ===== РАЗДЕЛИТЕЛЬ ===== */
+.auth-modal__divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.auth-modal__divider::before,
+.auth-modal__divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: #eee;
+}
+
+.auth-modal__divider span {
+  font-size: 12px;
+  color: #aaa;
+}
+
+/* ===== GOOGLE ===== */
+.auth-modal__google {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #111;
+  transition: border-color 0.15s;
+}
+
+.auth-modal__google:hover {
+  border-color: #111;
+}
+
+.auth-modal__google i {
+  color: #185FA5;
+  font-size: 16px;
+}
+
+/* ===== ПЕРЕКЛЮЧАТЕЛЬ ===== */
+.auth-modal__switch {
+  font-size: 13px;
+  color: #888;
+  text-align: center;
+  margin-top: 16px;
+}
+
+.auth-modal__switch span {
+  color: #185FA5;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+/* ===== РОЛИ ===== */
+.auth-modal__roles {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.auth-modal__role {
+  padding: 14px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+  background: #fff;
+  color: #888;
+  transition: all 0.15s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.auth-modal__role i {
+  font-size: 22px;
+}
+
+.auth-modal__role--active {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+  font-weight: 500;
+}
