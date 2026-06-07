@@ -4,11 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Личный кабинет — НайдиРепетитора</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <script type="module" crossorigin src="/tutor-platform/assets/dashboardStudent-ChafLnMh.js"></script>
-  <link rel="modulepreload" crossorigin href="/tutor-platform/assets/modulepreload-polyfill-DfS4ul37.js">
-  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/dashboard-9ZZs0Hcv.css">
-  <link rel="stylesheet" crossorigin href="/tutor-platform/assets/main-DrR9IYTl.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <link rel="stylesheet" href='/tutor-platform/src/styles/main.css" />
+  <link rel="stylesheet" href='/tutor-platform/src/styles/dashboard.css" />
 </head>
 <body>
 
@@ -49,7 +47,7 @@
         <a href="#" class="dashboard__sidebar-item">
           <i class="ti ti-settings"></i> Настройки
         </a>
-        <a href="/index.html" class="dashboard__sidebar-item">
+        <a href='/tutor-platform/index.html" class="dashboard__sidebar-item">
           <i class="ti ti-logout"></i> Выйти
         </a>
       </div>
@@ -69,6 +67,7 @@
     </main>
 
   </div>
-
+
+  <script type="module" src="/src/scripts/dashboard-student.js"></script>
 </body>
 </html>
