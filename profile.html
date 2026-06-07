@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <base href="/tutor-platform/"> <!-- Добавлен тег base -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Профиль репетитора — НайдиРепетитора</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href="/src/styles/main.css" />
-  <link rel="stylesheet" href="/src/styles/profile.css" />
+  <link rel="stylesheet" href="src/styles/main.css" /> <!-- Убран "/" перед "src/" -->
+  <link rel="stylesheet" href="src/styles/profile.css" /> <!-- Убран "/" перед "src/" -->
 </head>
 <body>
 
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <nav class="nav__links">
-      <a href="/index.html" class="nav__link">Главная</a>
-      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="index.html" class="nav__link">Главная</a> <!-- Убран "/" перед "index.html" -->
+      <a href="search.html" class="nav__link">Репетиторы</a> <!-- Убран "/" перед "search.html" -->
       <a href="#" class="nav__link">О нас</a>
-      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
-      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+      <button class="btn btn--outline" onclick="window.location.href='auth.html'">Войти</button> <!-- Убран "/" перед "auth.html" -->
+      <button class="btn btn--primary" onclick="window.location.href='auth.html'">Регистрация</button> <!-- Убран "/" перед "auth.html" -->
     </nav>
   </header>
 
   <div class="breadcrumb">
-    <a href="/index.html">Главная</a> →
-    <a href="/search.html">Репетиторы</a> →
-    <span>Анна Краснова</span>
+    <a href="index.html">Главная</a> → <!-- Убран "/" перед "index.html" -->
+    <a href="search.html">Репетиторы</a> → <!-- Убран "/" перед "search.html" -->
+    <span id="breadcrumbName">Репетитор</span>
   </div>
 
   <div class="profile-page">
@@ -49,7 +50,7 @@
           <span class="profile-card__trial-badge">Пробное — бесплатно</span>
         </div>
         <button class="btn btn--primary profile-card__btn"
-          onclick="window.location.href='/application.html'">Записаться на занятие</button>
+          onclick="window.location.href='application.html'">Записаться на занятие</button> <!-- Убран "/" перед "application.html" -->
         <button class="profile-card__btn profile-card__btn--msg">
           <i class="ti ti-message"></i> Написать репетитору
         </button>
@@ -73,12 +74,10 @@
     </aside>
 
     <main class="profile-main">
-
-        <div class="profile-block">
-          <div class="profile-block__title">О себе</div>
-          <p class="profile-block__text" id="profileAbout"></p>
-        </div>
-
+      <div class="profile-block">
+        <div class="profile-block__title">О себе</div>
+        <p class="profile-block__text" id="profileAbout"></p>
+      </div>
       <div class="profile-block">
         <div class="profile-block__title">Образование</div>
         <div class="edu-item">
@@ -96,15 +95,13 @@
           </div>
         </div>
       </div>
-
       <div class="profile-block">
         <div class="profile-block__title">Отзывы учеников</div>
         <div class="reviews" id="reviews"></div>
       </div>
-
     </main>
   </div>
 
-  <script type="module" src="/src/scripts/profile.js"></script>
+  <script type="module" src="src/scripts/profile.js"></script> <!-- Убран "/" перед "src/" -->
 </body>
 </html>

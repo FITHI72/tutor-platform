@@ -1,4 +1,3 @@
-
 const tutors = [
   { id: 1, name: 'Анна Краснова', initials: 'АК', subject: 'Математика, ЕГЭ', subjects: ['Математика'], rating: 4.9, reviews: 86, price: 1200, exp: '5 лет опыта', badge: 'exp', color: 'blue' },
   { id: 2, name: 'Михаил Волков', initials: 'МВ', subject: 'Английский язык', subjects: ['Английский'], rating: 4.8, reviews: 54, price: 900, exp: '3 года опыта', badge: 'exp', color: 'green' },
@@ -24,7 +23,8 @@ class TutorCard {
         <span class="tutor-card__rating">★ ${rating} (${reviews})</span>
         <span class="tutor-card__price">от ${price.toLocaleString()} ₽</span>
       </div>`;
-    div.addEventListener('click', () => window.location.href = '/profile.html');
+    // ✅ Исправленный путь к профилю
+    div.addEventListener('click', () => window.location.href = 'profile.html');
     return div;
   }
 }

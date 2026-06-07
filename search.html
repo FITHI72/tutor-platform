@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <base href="/tutor-platform/"> <!-- Добавлен тег base -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Поиск репетиторов — НайдиРепетитора</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href="/src/styles/main.css" />
-  <link rel="stylesheet" href="/src/styles/search.css" />
+  <link rel="stylesheet" href="src/styles/main.css" /> <!-- Убран "/" перед "src/" -->
+  <link rel="stylesheet" href="src/styles/search.css" /> <!-- Убран "/" перед "src/" -->
 </head>
 <body>
 
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <nav class="nav__links">
-      <a href="/index.html" class="nav__link">Главная</a>
-      <a href="/search.html" class="nav__link">Репетиторы</a>
+      <a href="index.html" class="nav__link">Главная</a> <!-- Убран "/" перед "index.html" -->
+      <a href="search.html" class="nav__link">Репетиторы</a> <!-- Убран "/" перед "search.html" -->
       <a href="#" class="nav__link">О нас</a>
-      <button class="btn btn--outline" onclick="window.location.href='/auth.html'">Войти</button>
-      <button class="btn btn--primary" onclick="window.location.href='/auth.html'">Регистрация</button>
+      <button class="btn btn--outline" onclick="window.location.href='auth.html'">Войти</button> <!-- Убран "/" перед "auth.html" -->
+      <button class="btn btn--primary" onclick="window.location.href='auth.html'">Регистрация</button> <!-- Убран "/" перед "auth.html" -->
     </nav>
   </header>
 
@@ -25,7 +26,6 @@
 
     <aside class="sidebar">
       <div class="sidebar__title">Фильтры</div>
-
       <div class="sidebar__group">
         <div class="sidebar__label">Предмет</div>
         <label class="sidebar__option"><input type="checkbox" checked> Математика</label>
@@ -35,14 +35,12 @@
         <label class="sidebar__option"><input type="checkbox"> Программирование</label>
         <label class="sidebar__option"><input type="checkbox"> Русский язык</label>
       </div>
-
       <div class="sidebar__group">
         <div class="sidebar__label">Формат</div>
         <label class="sidebar__option"><input type="radio" name="fmt" checked> Любой</label>
         <label class="sidebar__option"><input type="radio" name="fmt"> Онлайн</label>
         <label class="sidebar__option"><input type="radio" name="fmt"> Офлайн</label>
       </div>
-
       <div class="sidebar__group">
         <div class="sidebar__label">Цена за урок (₽)</div>
         <div class="sidebar__price-row">
@@ -51,14 +49,12 @@
           <input class="sidebar__price-input" type="text" placeholder="до 3000">
         </div>
       </div>
-
       <div class="sidebar__group">
         <div class="sidebar__label">Рейтинг</div>
         <label class="sidebar__option"><input type="radio" name="rat" checked> Любой</label>
         <label class="sidebar__option"><input type="radio" name="rat"> От 4.5 ★</label>
         <label class="sidebar__option"><input type="radio" name="rat"> От 4.8 ★</label>
       </div>
-
       <div class="sidebar__group">
         <div class="sidebar__label">Опыт</div>
         <label class="sidebar__option"><input type="radio" name="exp" checked> Любой</label>
@@ -66,7 +62,6 @@
         <label class="sidebar__option"><input type="radio" name="exp"> От 3 лет</label>
         <label class="sidebar__option"><input type="radio" name="exp"> От 5 лет</label>
       </div>
-
       <button class="sidebar__reset">Сбросить фильтры</button>
     </aside>
 
@@ -83,15 +78,12 @@
           <option value="exp">По опыту</option>
         </select>
       </div>
-
       <div class="search-main__count" id="resultsCount">Найдено <strong>4 репетитора</strong></div>
-
       <div id="loadingState" class="search-loading">
         <div class="search-loading__spinner"></div>
         <div class="search-loading__text">Загружаем репетиторов...</div>
       </div>
       <div class="tutors-list" id="tutorsList"></div>
-
       <div class="pagination">
         <button class="pagination__btn pagination__btn--active">1</button>
         <button class="pagination__btn">2</button>
@@ -103,6 +95,6 @@
 
   </div>
 
-  <script type="module" src="/src/scripts/search.js"></script>
+  <script type="module" src="src/scripts/search.js"></script> <!-- Убран "/" перед "src/" -->
 </body>
 </html>

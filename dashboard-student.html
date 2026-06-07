@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+  <base href="/tutor-platform/"> <!-- Добавлен тег base -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Личный кабинет — НайдиРепетитора</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
-  <link rel="stylesheet" href="/src/styles/main.css" />
-  <link rel="stylesheet" href="/src/styles/dashboard.css" />
+  <link rel="stylesheet" href="src/styles/main.css" /> <!-- Убран "/" перед "src/" -->
+  <link rel="stylesheet" href="src/styles/dashboard.css" /> <!-- Убран "/" перед "src/" -->
 </head>
 <body>
-
   <header class="nav">
     <div class="nav__logo">Найди<span class="nav__logo-accent">Репетитора</span></div>
     <div class="nav__right">
@@ -20,7 +20,6 @@
   </header>
 
   <div class="dashboard">
-
     <aside class="dashboard__sidebar">
       <div class="dashboard__sidebar-section">
         <div class="dashboard__sidebar-label">Главное</div>
@@ -47,7 +46,7 @@
         <a href="#" class="dashboard__sidebar-item">
           <i class="ti ti-settings"></i> Настройки
         </a>
-        <a href="/index.html" class="dashboard__sidebar-item">
+        <a href="index.html" class="dashboard__sidebar-item"> <!-- Убран "/" перед "index.html" -->
           <i class="ti ti-logout"></i> Выйти
         </a>
       </div>
@@ -56,18 +55,14 @@
     <main class="dashboard__main">
       <div class="dashboard__page-title">Добро пожаловать, Иван!</div>
       <div class="dashboard__page-sub">Вот что происходит с вашим обучением</div>
-
       <div class="dashboard__stats" id="studentStats"></div>
-
       <div class="dashboard__section-title">Ближайшие занятия</div>
       <div class="dashboard__lessons" id="studentLessons"></div>
-
       <div class="dashboard__section-title" style="margin-top:28px;">Избранные репетиторы</div>
       <div class="dashboard__favs" id="studentFavs"></div>
     </main>
-
   </div>
 
-  <script type="module" src="/src/scripts/dashboard-student.js"></script>
+  <script type="module" src="src/scripts/dashboard-student.js"></script> <!-- Убран "/" перед "src/" -->
 </body>
 </html>

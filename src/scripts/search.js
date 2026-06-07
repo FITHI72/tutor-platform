@@ -80,12 +80,14 @@ render() {
 
   div.querySelector('[data-action="profile"]').addEventListener('click', () => {
     localStorage.setItem('selectedTutor', JSON.stringify(this.tutor));
-    window.location.href = '/profile.html';
+    // ✅ Исправленный путь к профилю
+    window.location.href = 'profile.html';
   });
 
   div.querySelector('[data-action="apply"]').addEventListener('click', () => {
     localStorage.setItem('selectedTutor', JSON.stringify(this.tutor));
-    window.location.href = '/application.html';
+    // ✅ Исправленный путь к заявке
+    window.location.href = 'application.html';
   });
 
   return div;
@@ -150,3 +152,6 @@ class SearchPage {
 if (document.getElementById('tutorsList')) {
   new SearchPage();
 }
+
+
+

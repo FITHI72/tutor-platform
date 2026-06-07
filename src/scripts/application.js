@@ -72,7 +72,8 @@ class ApplicationPage {
   initSubmit() {
     document.getElementById('submitBtn').addEventListener('click', () => {
       alert('Заявка отправлена! Репетиторы скоро откликнутся.');
-      window.location.href = '/dashboard-student.html';
+      // ✅ Исправленный путь
+      window.location.href = 'dashboard-student.html';
     });
   }
 }

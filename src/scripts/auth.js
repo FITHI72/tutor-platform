@@ -1,5 +1,3 @@
-
-
 class AuthPage {
   constructor() {
     this.loginModal = document.getElementById('loginModal');
@@ -25,7 +23,8 @@ class AuthPage {
     // Кнопка входа
     document.getElementById('loginBtn').addEventListener('click', () => {
       const role = localStorage.getItem('role') || 'student';
-      window.location.href = role === 'tutor' ? '/dashboard-tutor.html' : '/dashboard-student.html';
+      // ✅ Исправленные пути
+      window.location.href = role === 'tutor' ? 'dashboard-tutor.html' : 'dashboard-student.html';
     });
 
     // Кнопка регистрации
@@ -33,7 +32,8 @@ class AuthPage {
       const activeRole = document.querySelector('.auth-modal__role--active');
       const role = activeRole ? activeRole.dataset.role : 'student';
       localStorage.setItem('role', role);
-      window.location.href = role === 'tutor' ? '/dashboard-tutor.html' : '/dashboard-student.html';
+      // ✅ Исправленные пути
+      window.location.href = role === 'tutor' ? 'dashboard-tutor.html' : 'dashboard-student.html';
     });
   }
 
